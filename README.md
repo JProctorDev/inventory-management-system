@@ -4,6 +4,10 @@ A Windows Forms inventory management application built with C# and .NET 8. This 
 
 ---
 
+## Application Preview
+<img width="1182" height="688" alt="Screenshot 2026-07-28 190343" src="https://github.com/user-attachments/assets/94ad3019-8cff-49d3-b486-3709a4418ea5" />
+
+
 ## Features
 
 - Add new inventory products
