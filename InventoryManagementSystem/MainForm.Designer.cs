@@ -63,6 +63,7 @@
             dgvInventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInventory.Size = new Size(760, 620);
             dgvInventory.TabIndex = 0;
+            dgvInventory.CellContentClick += dgvInventory_CellContentClick;
             // 
             // grpProductInfo
             // 
@@ -95,6 +96,7 @@
             btnClear.TabIndex = 13;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += this.btnClear_Click;
             // 
             // btnDelete
             // 
@@ -104,6 +106,7 @@
             btnDelete.TabIndex = 12;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnUpdate
             // 
@@ -113,6 +116,7 @@
             btnUpdate.TabIndex = 11;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnAdd
             // 
@@ -122,7 +126,7 @@
             btnAdd.TabIndex = 10;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += this.btnAdd_Click;
+            btnAdd.Click += btnAdd_Click;
             // 
             // nudPrice
             // 

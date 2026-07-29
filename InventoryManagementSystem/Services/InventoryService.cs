@@ -20,4 +20,36 @@ public class InventoryService
         item.Id = nextId++;
         Inventory.Add(item);
     }
+
+    // Updates the values of an existing inventory item.
+    public void UpdateItem(
+    InventoryItem item,
+    string sku,
+    string name,
+    string category,
+    int quantity,
+    decimal unitPrice)
+    {
+        item.Sku = sku;
+        item.Name = name;
+        item.Category = category;
+        item.Quantity = quantity;
+        item.UnitPrice = unitPrice;
+
+        // Notify the DataGridView that the item's values changed.
+        Inventory.ResetBindings();
+    }
+
+    // Removes an inventory item from the collection.
+    public void DeleteItem(InventoryItem item)
+    {
+        Inventory.Remove(item);
+    }
+
+    public bool SkuExists(string sku, InventoryItem? ignoreItem = null)
+    {
+        return Inventory.Any(item =>
+            item != ignoreItem &&
+            item.Sku.Equals(sku, StringComparison.OrdinalIgnoreCase));
+    }
 }
